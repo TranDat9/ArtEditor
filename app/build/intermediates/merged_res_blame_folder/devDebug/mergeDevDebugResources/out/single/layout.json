@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "vn.tapbi.arteditor.app-mergeDevDebugResources-52:/layout/item_photo.xml",
+        "source": "vn.tapbi.arteditor.app-main-57:/layout/item_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-mergeDevDebugResources-52:\\layout\\favourite_fragment.xml",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\favourite_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-mergeDevDebugResources-52:\\layout\\item_photo.xml",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\item_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-mergeDevDebugResources-52:\\layout\\home_fragment.xml",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\home_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-mergeDevDebugResources-52:\\layout\\item_topic.xml",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\item_topic.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-mergeDevDebugResources-52:\\layout\\my_project_fragment.xml",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\my_project_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-mergeDevDebugResources-52:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-mergeDevDebugResources-52:\\layout\\item_category.xml",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\item_category.xml"
+    }
+]

@@ -1,0 +1,154 @@
+[
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable-xxhdpi_ic_unlike.png.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable-xxhdpi\\ic_unlike.png"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable-xxhdpi_ic_like.png.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable-xxhdpi\\ic_like.png"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable-xxhdpi_ic_heart.png.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable-xxhdpi\\ic_heart.png"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\navigation_main_nav.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\navigation\\main_nav.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\menu_menu.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\menu\\menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\layout_home_fragment.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\home_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\layout_favourite_fragment.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\favourite_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable-xxhdpi_like.png.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable-xxhdpi\\like.png"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable-xxhdpi_please_check.png.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable-xxhdpi\\please_check.png"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable-xxhdpi_ic_project.png.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable-xxhdpi\\ic_project.png"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable_button_background.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable\\button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "vn.tapbi.arteditor.app-devDebug-53:/layout_item_photo.xml.flat",
+        "source": "vn.tapbi.arteditor.app-main-57:/layout/item_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\layout_item_category.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\item_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\layout_item_photo.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\item_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable-xxhdpi_ic_photo.png.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable-xxhdpi\\ic_photo.png"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\layout_item_topic.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\item_topic.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\layout_my_project_fragment.xml.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\layout\\my_project_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable-xxhdpi_ic_favourite.png.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable-xxhdpi\\ic_favourite.png"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable-xxhdpi_ic_home.png.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable-xxhdpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable-xxhdpi_ic_no_internet.png.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable-xxhdpi\\ic_no_internet.png"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\drawable-xxhdpi_ic_myproject.png.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\drawable-xxhdpi\\ic_myproject.png"
+    },
+    {
+        "merged": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-devDebug-53:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\trand\\.gradle\\daemon\\8.6\\vn.tapbi.arteditor.app-main-57:\\mipmap-xhdpi\\ic_launcher.webp"
+    }
+]

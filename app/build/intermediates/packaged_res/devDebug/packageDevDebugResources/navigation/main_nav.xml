@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="vn.tapbi.arteditor.ui.main.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="vn.tapbi.arteditor.ui.main.favourite.FavouriteFragment"
+        android:label="favourite_fragment"
+        tools:layout="@layout/favourite_fragment" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_myProjectFragment"
+            app:destination="@id/myProjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myProjectFragment"
+        android:name="vn.tapbi.arteditor.ui.main.myproject.MyProjectFragment"
+        android:label="my_project_fragment"
+        tools:layout="@layout/my_project_fragment" />
+</navigation>

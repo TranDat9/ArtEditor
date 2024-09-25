@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="text">#582FFF</color>
+    <color name="text_color">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">ArtEditor</string>
+    <string name="beauty">beauty</string>
+    <string name="english" translatable="false">English</string>
+    <string name="fashion">fashion</string>
+    <string name="film">film</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nature">nature</string>
+    <string name="party">party</string>
+    <string name="vietnam" translatable="false">Tiếng Việt</string>
+    <style name="Base.Theme.ArtEditor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.ArtEditor" parent="Base.Theme.ArtEditor"/>
+</resources>
