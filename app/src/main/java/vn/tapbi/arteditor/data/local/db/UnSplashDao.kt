@@ -25,6 +25,10 @@ interface UnSplashDao  {
     @Query("SELECT * FROM photo WHERE nameTopic = :category")
     fun getPhotosByCategory(category: String): PagingSource<Int, UnsplashPhotoModel>
 
+    @Query("SELECT * FROM photo WHERE `like` = 1")
+    fun getLikedPhotos(): LiveData<List<UnsplashPhotoModel>>
+
+
     @Query("UPDATE photo SET `like` = :like WHERE photoId = :photoId")
      fun updatePhotoLike(photoId: String, like: Boolean)
 

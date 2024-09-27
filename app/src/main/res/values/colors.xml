@@ -4,5 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="text">#582FFF</color>
     <color name="text_color">#000000</color>
-
+    <color name="opaqueBG">#61000000</color>
 </resources>

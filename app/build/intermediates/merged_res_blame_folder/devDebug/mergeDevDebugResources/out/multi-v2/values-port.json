@@ -4,7 +4,7 @@
             "outputFile": "vn.tapbi.arteditor.app-mergeDevDebugResources-51:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\trand\\.gradle\\caches\\transforms-4\\c278cf50a3479d5849a2a18280c8c5e3\\transformed\\appcompat-1.2.0\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\trand\\.gradle\\caches\\transforms-4\\aa1d43c14d91286558c48f27ab35f59a\\transformed\\appcompat-1.2.0\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

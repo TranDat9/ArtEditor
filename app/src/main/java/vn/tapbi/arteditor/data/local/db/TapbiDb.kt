@@ -11,7 +11,6 @@ import vn.tapbi.arteditor.data.model.UnsplashPhotoModel
 @Database(entities = [UnsplashPhotoModel::class], version = Constant.DB_VERSION)
 abstract class TapbiDb : RoomDatabase() {
     abstract val unSplashDao: UnSplashDao
-
     companion object {
         val MIGRATION_1_2: Migration = object : Migration(1, 2) {
             override fun migrate(database: SupportSQLiteDatabase) {}

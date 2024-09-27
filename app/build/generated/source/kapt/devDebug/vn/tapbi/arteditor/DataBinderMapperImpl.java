@@ -16,17 +16,29 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import vn.tapbi.arteditor.databinding.ActivityMainBindingImpl;
+import vn.tapbi.arteditor.databinding.BottomSheetDownloadBindingImpl;
+import vn.tapbi.arteditor.databinding.DownloadFragmentBindingImpl;
+import vn.tapbi.arteditor.databinding.FavouriteFragmentBindingImpl;
 import vn.tapbi.arteditor.databinding.HomeFragmentBindingImpl;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYMAIN = 1;
 
-  private static final int LAYOUT_HOMEFRAGMENT = 2;
+  private static final int LAYOUT_BOTTOMSHEETDOWNLOAD = 2;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(2);
+  private static final int LAYOUT_DOWNLOADFRAGMENT = 3;
+
+  private static final int LAYOUT_FAVOURITEFRAGMENT = 4;
+
+  private static final int LAYOUT_HOMEFRAGMENT = 5;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(5);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(vn.tapbi.arteditor.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(vn.tapbi.arteditor.R.layout.bottom_sheet_download, LAYOUT_BOTTOMSHEETDOWNLOAD);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(vn.tapbi.arteditor.R.layout.download_fragment, LAYOUT_DOWNLOADFRAGMENT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(vn.tapbi.arteditor.R.layout.favourite_fragment, LAYOUT_FAVOURITEFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(vn.tapbi.arteditor.R.layout.home_fragment, LAYOUT_HOMEFRAGMENT);
   }
 
@@ -44,6 +56,24 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityMainBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
+        }
+        case  LAYOUT_BOTTOMSHEETDOWNLOAD: {
+          if ("layout/bottom_sheet_download_0".equals(tag)) {
+            return new BottomSheetDownloadBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for bottom_sheet_download is invalid. Received: " + tag);
+        }
+        case  LAYOUT_DOWNLOADFRAGMENT: {
+          if ("layout/download_fragment_0".equals(tag)) {
+            return new DownloadFragmentBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for download_fragment is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FAVOURITEFRAGMENT: {
+          if ("layout/favourite_fragment_0".equals(tag)) {
+            return new FavouriteFragmentBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for favourite_fragment is invalid. Received: " + tag);
         }
         case  LAYOUT_HOMEFRAGMENT: {
           if ("layout/home_fragment_0".equals(tag)) {
@@ -104,10 +134,13 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(2);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(5);
 
     static {
       sKeys.put("layout/activity_main_0", vn.tapbi.arteditor.R.layout.activity_main);
+      sKeys.put("layout/bottom_sheet_download_0", vn.tapbi.arteditor.R.layout.bottom_sheet_download);
+      sKeys.put("layout/download_fragment_0", vn.tapbi.arteditor.R.layout.download_fragment);
+      sKeys.put("layout/favourite_fragment_0", vn.tapbi.arteditor.R.layout.favourite_fragment);
       sKeys.put("layout/home_fragment_0", vn.tapbi.arteditor.R.layout.home_fragment);
     }
   }

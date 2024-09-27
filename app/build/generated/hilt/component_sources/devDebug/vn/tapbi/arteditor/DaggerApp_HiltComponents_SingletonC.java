@@ -52,6 +52,8 @@ import vn.tapbi.arteditor.ui.base.BaseDialogFragment;
 import vn.tapbi.arteditor.ui.base.BaseFragment;
 import vn.tapbi.arteditor.ui.main.MainViewModel;
 import vn.tapbi.arteditor.ui.main.MainViewModel_HiltModules_KeyModule_ProvideFactory;
+import vn.tapbi.arteditor.ui.main.download.DownloadViewModel;
+import vn.tapbi.arteditor.ui.main.download.DownloadViewModel_HiltModules_KeyModule_ProvideFactory;
 import vn.tapbi.arteditor.ui.main.favourite.FavouriteViewModel;
 import vn.tapbi.arteditor.ui.main.favourite.FavouriteViewModel_HiltModules_KeyModule_ProvideFactory;
 import vn.tapbi.arteditor.ui.main.home.HomeViewModel;
@@ -415,7 +417,7 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(3).add(FavouriteViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return SetBuilder.<String>newSetBuilder(4).add(DownloadViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(FavouriteViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -451,6 +453,8 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     private final ViewModelCImpl viewModelCImpl = this;
 
+    private Provider<DownloadViewModel> downloadViewModelProvider;
+
     private Provider<FavouriteViewModel> favouriteViewModelProvider;
 
     private Provider<HomeViewModel> homeViewModelProvider;
@@ -474,14 +478,15 @@ public final class DaggerApp_HiltComponents_SingletonC {
     @SuppressWarnings("unchecked")
     private void initialize(final SavedStateHandle savedStateHandleParam,
         final ViewModelLifecycle viewModelLifecycleParam) {
-      this.favouriteViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
-      this.homeViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
-      this.mainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.downloadViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
+      this.favouriteViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.homeViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.mainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(3).put("vn.tapbi.arteditor.ui.main.favourite.FavouriteViewModel", ((Provider) favouriteViewModelProvider)).put("vn.tapbi.arteditor.ui.main.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("vn.tapbi.arteditor.ui.main.MainViewModel", ((Provider) mainViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(4).put("vn.tapbi.arteditor.ui.main.download.DownloadViewModel", ((Provider) downloadViewModelProvider)).put("vn.tapbi.arteditor.ui.main.favourite.FavouriteViewModel", ((Provider) favouriteViewModelProvider)).put("vn.tapbi.arteditor.ui.main.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("vn.tapbi.arteditor.ui.main.MainViewModel", ((Provider) mainViewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -505,13 +510,16 @@ public final class DaggerApp_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // vn.tapbi.arteditor.ui.main.favourite.FavouriteViewModel 
-          return (T) new FavouriteViewModel();
+          case 0: // vn.tapbi.arteditor.ui.main.download.DownloadViewModel 
+          return (T) new DownloadViewModel(viewModelCImpl.unSplashPhotoRepository());
 
-          case 1: // vn.tapbi.arteditor.ui.main.home.HomeViewModel 
+          case 1: // vn.tapbi.arteditor.ui.main.favourite.FavouriteViewModel 
+          return (T) new FavouriteViewModel(viewModelCImpl.unSplashPhotoRepository());
+
+          case 2: // vn.tapbi.arteditor.ui.main.home.HomeViewModel 
           return (T) new HomeViewModel(viewModelCImpl.unSplashPhotoRepository());
 
-          case 2: // vn.tapbi.arteditor.ui.main.MainViewModel 
+          case 3: // vn.tapbi.arteditor.ui.main.MainViewModel 
           return (T) new MainViewModel();
 
           default: throw new AssertionError(id);

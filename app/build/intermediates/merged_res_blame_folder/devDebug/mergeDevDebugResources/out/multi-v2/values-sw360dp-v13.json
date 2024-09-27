@@ -4,7 +4,7 @@
             "outputFile": "vn.tapbi.arteditor.app-mergeDevDebugResources-51:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\trand\\.gradle\\caches\\transforms-4\\01b4e49ce5ceee728d3d427583436433\\transformed\\preference-1.2.0\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\trand\\.gradle\\caches\\transforms-4\\e6f980749c6c4ea8168c1fd910de108a\\transformed\\preference-1.2.0\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -6,6 +6,7 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import vn.tapbi.arteditor.R
 import vn.tapbi.arteditor.common.Constant
@@ -108,6 +109,7 @@ class HomeFragment : BaseBindingFragment<HomeFragmentBinding, HomeViewModel>() {
         binding.recyclerViewCategory.setHasFixedSize(true)
 
         categoryAdapter = CategoryAdapter(viewModel,viewLifecycleOwner)
+        //categoryAdapter = CategoryAdapter()
         binding.recyclerViewCategory.adapter = categoryAdapter
         categoryAdapter.setCategories(categoriesList)
 

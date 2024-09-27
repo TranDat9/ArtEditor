@@ -39,9 +39,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun providesUnsplashApi(
-        retrofit: Retrofit
-    ): UnsplashApi {
+    fun providesUnsplashApi(retrofit: Retrofit): UnsplashApi {
         return retrofit.create(UnsplashApi::class.java)
     }
 

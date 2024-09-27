@@ -7,6 +7,7 @@ import androidx.room.CoroutinesRoom;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
 import androidx.room.paging.LimitOffsetPagingSource;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
@@ -33,6 +34,8 @@ public final class UnSplashDao_Impl implements UnSplashDao {
   private final RoomDatabase __db;
 
   private final EntityInsertionAdapter<UnsplashPhotoModel> __insertionAdapterOfUnsplashPhotoModel;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdatePhotoLike;
 
   public UnSplashDao_Impl(RoomDatabase __db) {
     this.__db = __db;
@@ -68,6 +71,13 @@ public final class UnSplashDao_Impl implements UnSplashDao {
         stmt.bindLong(5, _tmp);
       }
     };
+    this.__preparedStmtOfUpdatePhotoLike = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE photo SET `like` = ? WHERE photoId = ?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -86,6 +96,29 @@ public final class UnSplashDao_Impl implements UnSplashDao {
         }
       }
     }, continuation);
+  }
+
+  @Override
+  public void updatePhotoLike(final String photoId, final boolean like) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdatePhotoLike.acquire();
+    int _argIndex = 1;
+    final int _tmp = like ? 1 : 0;
+    _stmt.bindLong(_argIndex, _tmp);
+    _argIndex = 2;
+    if (photoId == null) {
+      _stmt.bindNull(_argIndex);
+    } else {
+      _stmt.bindString(_argIndex, photoId);
+    }
+    __db.beginTransaction();
+    try {
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdatePhotoLike.release(_stmt);
+    }
   }
 
   @Override
@@ -286,6 +319,72 @@ public final class UnSplashDao_Impl implements UnSplashDao {
         return _result;
       }
     };
+  }
+
+  @Override
+  public LiveData<List<UnsplashPhotoModel>> getLikedPhotos() {
+    final String _sql = "SELECT * FROM photo WHERE `like` = 1";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return __db.getInvalidationTracker().createLiveData(new String[]{"photo"}, false, new Callable<List<UnsplashPhotoModel>>() {
+      @Override
+      public List<UnsplashPhotoModel> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "photoId");
+          final int _cursorIndexOfNameTopic = CursorUtil.getColumnIndexOrThrow(_cursor, "nameTopic");
+          final int _cursorIndexOfLinksParse = CursorUtil.getColumnIndexOrThrow(_cursor, "photoLink");
+          final int _cursorIndexOfUrlsParse = CursorUtil.getColumnIndexOrThrow(_cursor, "photoUrl");
+          final int _cursorIndexOfLike = CursorUtil.getColumnIndexOrThrow(_cursor, "like");
+          final List<UnsplashPhotoModel> _result = new ArrayList<UnsplashPhotoModel>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final UnsplashPhotoModel _item;
+            _item = new UnsplashPhotoModel();
+            final String _tmpId;
+            if (_cursor.isNull(_cursorIndexOfId)) {
+              _tmpId = null;
+            } else {
+              _tmpId = _cursor.getString(_cursorIndexOfId);
+            }
+            _item.setId(_tmpId);
+            final String _tmpNameTopic;
+            if (_cursor.isNull(_cursorIndexOfNameTopic)) {
+              _tmpNameTopic = null;
+            } else {
+              _tmpNameTopic = _cursor.getString(_cursorIndexOfNameTopic);
+            }
+            _item.setNameTopic(_tmpNameTopic);
+            final String _tmpLinksParse;
+            if (_cursor.isNull(_cursorIndexOfLinksParse)) {
+              _tmpLinksParse = null;
+            } else {
+              _tmpLinksParse = _cursor.getString(_cursorIndexOfLinksParse);
+            }
+            _item.setLinksParse(_tmpLinksParse);
+            final String _tmpUrlsParse;
+            if (_cursor.isNull(_cursorIndexOfUrlsParse)) {
+              _tmpUrlsParse = null;
+            } else {
+              _tmpUrlsParse = _cursor.getString(_cursorIndexOfUrlsParse);
+            }
+            _item.setUrlsParse(_tmpUrlsParse);
+            final boolean _tmpLike;
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfLike);
+            _tmpLike = _tmp != 0;
+            _item.setLike(_tmpLike);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
   }
 
   public static List<Class<?>> getRequiredConverters() {

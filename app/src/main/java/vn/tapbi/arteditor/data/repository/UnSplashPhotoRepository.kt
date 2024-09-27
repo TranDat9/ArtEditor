@@ -33,6 +33,10 @@ class UnSplashPhotoRepository @Inject constructor(
         ).flow
     }
 
+    fun getLikedPhotos(): LiveData<List<UnsplashPhotoModel>> {
+        return tapbiDb.unSplashDao.getLikedPhotos()
+    }
+
     suspend fun refreshPhotos(clientId: String, category: String) {
         try {
             Log.d("API Request", "Fetching photos with client_id: $clientId and category: $category")

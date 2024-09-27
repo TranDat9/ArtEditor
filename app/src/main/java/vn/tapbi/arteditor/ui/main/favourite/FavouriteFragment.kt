@@ -5,56 +5,55 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import androidx.recyclerview.widget.GridLayoutManager
 import vn.tapbi.arteditor.R
+import vn.tapbi.arteditor.data.model.UnsplashPhotoModel
+import vn.tapbi.arteditor.databinding.FavouriteFragmentBinding
+import vn.tapbi.arteditor.ui.adapter.FavouritePhotoAdapter
+import vn.tapbi.arteditor.ui.adapter.WallInteractionListener
+import vn.tapbi.arteditor.ui.base.BaseBindingFragment
+import vn.tapbi.arteditor.utils.Constants
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class FavouriteFragment : BaseBindingFragment<FavouriteFragmentBinding, FavouriteViewModel>(),
+WallInteractionListener{
 
-/**
- * A simple [Fragment] subclass.
- * Use the [FavouriteFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class FavouriteFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    private lateinit var favouritePhotoAdapter: FavouritePhotoAdapter
+
+        override fun getViewModel(): Class<FavouriteViewModel> {
+            return FavouriteViewModel::class.java
         }
+
+        override val layoutId: Int
+            get() = R.layout.favourite_fragment
+
+    override fun observerData() {
+
+        viewModel.favouritePhotos.observe(viewLifecycleOwner, { photos ->
+            favouritePhotoAdapter.setPhotos(photos)
+        })
+
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.favourite_fragment, container, false)
+    override fun onCreatedView(view: View?, savedInstanceState: Bundle?) {
+        favouritePhotoAdapter = FavouritePhotoAdapter(this)
+        binding.recyclerViewFavourite.layoutManager = GridLayoutManager(context, 2)
+        binding.recyclerViewFavourite.adapter = favouritePhotoAdapter
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FavouriteFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            FavouriteFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onPermissionGranted() {
+
     }
+
+    override fun onClickItem(data: UnsplashPhotoModel, view: View) {
+        val imageData = arrayOf(data.urlsParse.toString(), data.id)
+                        val bundle = Bundle().apply {
+                            putStringArray("imageData", imageData)
+                        }
+                        Navigation.findNavController(view)
+                            .navigate(R.id.action_favouriteFragment_to_downloadFragment, bundle)
+                    }
+
+
 }

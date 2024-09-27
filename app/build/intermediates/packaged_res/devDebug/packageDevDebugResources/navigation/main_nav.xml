@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -19,12 +18,17 @@
         android:label="favourite_fragment"
         tools:layout="@layout/favourite_fragment" >
         <action
-            android:id="@+id/action_favouriteFragment_to_myProjectFragment"
-            app:destination="@id/myProjectFragment" />
+            android:id="@+id/action_favouriteFragment_to_downloadFragment"
+            app:destination="@id/downloadFragment" />
     </fragment>
     <fragment
         android:id="@+id/myProjectFragment"
         android:name="vn.tapbi.arteditor.ui.main.myproject.MyProjectFragment"
         android:label="my_project_fragment"
         tools:layout="@layout/my_project_fragment" />
+    <fragment
+        android:id="@+id/downloadFragment"
+        android:name="vn.tapbi.arteditor.ui.main.download.DownloadFragment"
+        android:label="DownloadFragment" >
+    </fragment>
 </navigation>

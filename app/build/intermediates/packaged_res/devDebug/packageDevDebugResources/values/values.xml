@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="opaqueBG">#61000000</color>
     <color name="text">#582FFF</color>
     <color name="text_color">#000000</color>
     <color name="white">#FFFFFFFF</color>
@@ -18,4 +19,8 @@
         
     </style>
     <style name="Theme.ArtEditor" parent="Base.Theme.ArtEditor"/>
+    <style name="roundImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
 </resources>

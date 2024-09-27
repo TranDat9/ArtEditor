@@ -52,6 +52,7 @@ import vn.tapbi.arteditor.ui.base.BaseActivity_GeneratedInjector;
 import vn.tapbi.arteditor.ui.base.BaseDialogFragment_GeneratedInjector;
 import vn.tapbi.arteditor.ui.base.BaseFragment_GeneratedInjector;
 import vn.tapbi.arteditor.ui.main.MainViewModel_HiltModules;
+import vn.tapbi.arteditor.ui.main.download.DownloadViewModel_HiltModules;
 import vn.tapbi.arteditor.ui.main.favourite.FavouriteViewModel_HiltModules;
 import vn.tapbi.arteditor.ui.main.home.HomeViewModel_HiltModules;
 
@@ -162,6 +163,7 @@ public final class App_HiltComponents {
       modules = {
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
+          DownloadViewModel_HiltModules.KeyModule.class,
           FavouriteViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           HomeViewModel_HiltModules.KeyModule.class,
@@ -201,6 +203,7 @@ public final class App_HiltComponents {
 
   @Subcomponent(
       modules = {
+          DownloadViewModel_HiltModules.BindsModule.class,
           FavouriteViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           HomeViewModel_HiltModules.BindsModule.class,

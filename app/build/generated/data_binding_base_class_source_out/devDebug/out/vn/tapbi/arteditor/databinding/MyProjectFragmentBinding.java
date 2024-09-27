@@ -4,25 +4,32 @@ package vn.tapbi.arteditor.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 import vn.tapbi.arteditor.R;
 
 public final class MyProjectFragmentBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final CoordinatorLayout rootView;
 
-  private MyProjectFragmentBinding(@NonNull FrameLayout rootView) {
+  @NonNull
+  public final View bottomSheetBG;
+
+  private MyProjectFragmentBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull View bottomSheetBG) {
     this.rootView = rootView;
+    this.bottomSheetBG = bottomSheetBG;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +50,19 @@ public final class MyProjectFragmentBinding implements ViewBinding {
 
   @NonNull
   public static MyProjectFragmentBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.bottomSheetBG;
+      View bottomSheetBG = ViewBindings.findChildViewById(rootView, id);
+      if (bottomSheetBG == null) {
+        break missingId;
+      }
 
-    return new MyProjectFragmentBinding((FrameLayout) rootView);
+      return new MyProjectFragmentBinding((CoordinatorLayout) rootView, bottomSheetBG);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

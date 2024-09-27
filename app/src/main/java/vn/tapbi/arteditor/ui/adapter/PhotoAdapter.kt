@@ -43,25 +43,26 @@ class PhotoAdapter
                     .error(R.drawable.ic_launcher_background)
                     .into(binding.photoImageView)
 
-         if (photo.like == true) {
+
+            if (photo.like) {
                 binding.likeImageView.setImageResource(R.drawable.ic_like)
+            } else {
+                binding.likeImageView.setImageResource(R.drawable.ic_unlike)
             }
 
             binding.likeImageView.setOnClickListener {
-                photo.like = true
-                binding.likeImageView.setImageResource(R.drawable.ic_like)
-                //this@PhotoAdapter.updatePhotoLike(photo = photo)
+                photo.like = !photo.like
+                if (photo.like) {
+                    binding.likeImageView.setImageResource(R.drawable.ic_like)
+                } else {
+                    binding.likeImageView.setImageResource(R.drawable.ic_unlike)
+                }
+                // Notify the adapter of the change
+                notifyItemChanged(bindingAdapterPosition)
             }
 
         }
     }
-
-//    private fun updatePhotoLike(photo: UnsplashPhotoModel) {
-//        // Use a coroutine to update the photo like status in the database
-//        CoroutineScope(Dispatchers.IO).launch {
-//            photoRepository.updatePhotoLike(photo)
-//        }
-//    }
 
     companion object {
         private val PHOTO_COMPARATOR = object : DiffUtil.ItemCallback<UnsplashPhotoModel>() {
